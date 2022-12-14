@@ -42,7 +42,7 @@ from .agent_wrapper import EnvironmentBounds
 import cyberbattle.agents.baseline.agent_wrapper as w
 from .agent_randomcredlookup import CredentialCacheExploiter
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 
 
 class CyberBattleStateActionModel:
